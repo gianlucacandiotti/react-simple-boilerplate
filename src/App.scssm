@@ -1,0 +1,31 @@
+@import "~styles/commons/index";
+
+.app {
+  text-align: center;
+}
+
+.appLogo {
+  animation: appLogoSpin infinite 20s linear;
+  height: 80px;
+}
+
+.appHeader {
+  background-color: #222;
+  height: 190px;
+  padding: 20px;
+  color: white;
+
+  @include breakpoint(md) {
+    background-color: #fff;
+    color: #222;
+  }
+}
+
+.appIntro {
+  font-size: large;
+}
+
+@keyframes appLogoSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

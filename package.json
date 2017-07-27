@@ -1,5 +1,5 @@
 {
-  "name": "hackathon-ods",
+  "name": "react-simple-boilerplate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -51,7 +51,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.js && react-snapshot",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
