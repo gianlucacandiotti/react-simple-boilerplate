@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import Modal from 'components/Modal';
-import styles from './styles.scssm';
+import './styles.scssm';
 
 class ExampleModal extends PureComponent {
   state = {
@@ -15,7 +15,7 @@ class ExampleModal extends PureComponent {
     return (
       <div>
         <button
-          className={styles.button}
+          styleName="button"
           onClick={() => {
             this.setState({
               active: true,
@@ -32,7 +32,7 @@ class ExampleModal extends PureComponent {
             });
           }}
         >
-          <div className={styles.modalContent}>
+          <div styleName="modal-content">
             This is an example modal! Hope you find it useful!
           </div>
         </Modal>

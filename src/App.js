@@ -3,8 +3,8 @@ import Helmet from 'react-helmet';
 import ExampleModal from 'components/ExampleModal';
 import reactLogo from 'assets/images/react-logo.png';
 import sassLogo from 'assets/images/sass-logo.svg';
-import cssModulesLogo from 'assets/images/css-modules-logo.png';
-import styles from './App.scssm';
+import reactCssModulesLogo from 'assets/images/react-css-modules-logo.png';
+import './App.scssm';
 
 const title = 'react-simple-boilerplate';
 
@@ -20,27 +20,27 @@ class App extends PureComponent {
           <title>{title}</title>
         </Helmet>
 
-        <div className={styles.appHeader}>
-          <div className={styles.logosContainer}>
-            <img src={reactLogo} className={styles.logo} alt="React Logo" />
-            <img src={sassLogo} className={styles.logo} alt="Sass Logo" />
-            <img src={cssModulesLogo} className={styles.logo} alt="CSS Modules Logo" />
+        <div styleName="app-header">
+          <div styleName="logos-container">
+            <img src={reactLogo} styleName="logo" alt="React Logo" />
+            <img src={sassLogo} styleName="logo" alt="Sass Logo" />
+            <img src={reactCssModulesLogo} styleName="logo" alt="CSS Modules Logo" />
           </div>
 
-          <h1 className={styles.title}>Welcome to react-simple-boilerplate</h1>
+          <h1 styleName="title">Welcome to react-simple-boilerplate</h1>
         </div>
-        <div className={styles.appIntro}>
+        <div styleName="app-intro">
           <p>
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
         </div>
-        <section className={styles.componentsSection}>
-          <h2 className={styles.componentsSectionTitle}>
+        <section styleName="components-section">
+          <h2 styleName="components-section-title">
             Here are some example components!
           </h2>
           <div>
             <div>
-              <h3 className={styles.componentTitle}>Example Modal</h3>
+              <h3 styleName="component-title">Example Modal</h3>
               <ExampleModal />
             </div>
           </div>

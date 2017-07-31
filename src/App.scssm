@@ -1,6 +1,6 @@
 @import "~styles/commons/index";
 
-.appHeader {
+.app-header {
   border-bottom: 1px solid $dark-grey;
   color: $dark-grey;
   padding: 20px;
@@ -12,7 +12,7 @@
   }
 }
 
-.logosContainer {
+.logos-container {
   align-items: center;
   display: flex;
   justify-content: space-around;
@@ -31,7 +31,7 @@
   margin: 0;
 }
 
-.appIntro {
+.app-intro {
   color: black;
   font-size: 18px;
   padding: 20px;
@@ -41,17 +41,17 @@
   }
 }
 
-.componentsSection {
+.components-section {
   padding: 20px;
 }
 
-.componentsSectionTitle {
+.components-section-title {
   color: $black;
   font-size: 24px;
   font-weight: 500;
 }
 
-.componentTitle {
+.component-title {
   color: $black;
   font-size: 20px;
   font-weight: 400;

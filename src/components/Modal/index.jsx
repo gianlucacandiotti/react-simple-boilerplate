@@ -17,7 +17,10 @@ const Modal = ({
   children,
 }) => (
   <div className={`modal ${active ? 'is-active' : ''}`}>
-    <div className="modal-background" />
+    <div
+      className="modal-background"
+      onClick={handleClose}
+    />
     <div className="modal-content">
       {children}
     </div>
