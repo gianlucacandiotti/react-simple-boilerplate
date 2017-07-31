@@ -7,7 +7,9 @@
   color: $white;
   font-size: 20px;
   font-weight: 400;
+  max-width: 360px;
   padding: 10px 20px;
+  width: 100%;
 }
 
 .modal-content {
