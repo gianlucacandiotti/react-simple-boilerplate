@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import ExampleModal from 'components/ExampleModal';
 import reactLogo from 'assets/images/react-logo.png';
 import sassLogo from 'assets/images/sass-logo.svg';
-import cssModulesLogo from 'assets/images/css-modules-logo.png';
+import reactCssModulesLogo from 'assets/images/react-css-modules-logo.png';
 import './App.scssm';
 
 const title = 'react-simple-boilerplate';
@@ -24,7 +24,7 @@ class App extends PureComponent {
           <div styleName="logos-container">
             <img src={reactLogo} styleName="logo" alt="React Logo" />
             <img src={sassLogo} styleName="logo" alt="Sass Logo" />
-            <img src={cssModulesLogo} styleName="logo" alt="CSS Modules Logo" />
+            <img src={reactCssModulesLogo} styleName="logo" alt="CSS Modules Logo" />
           </div>
 
           <h1 styleName="title">Welcome to react-simple-boilerplate</h1>
