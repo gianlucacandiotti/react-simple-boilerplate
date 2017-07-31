@@ -1,31 +1,42 @@
 @import "~styles/commons/index";
 
-.app {
-  text-align: center;
-}
-
-.appLogo {
-  animation: appLogoSpin infinite 20s linear;
-  height: 80px;
-}
-
 .appHeader {
-  background-color: #222;
-  height: 190px;
+  border-bottom: 1px solid $dark-grey;
+  color: $dark-grey;
   padding: 20px;
-  color: white;
 
   @include breakpoint(md) {
-    background-color: #fff;
-    color: #222;
+    background-color: $light-grey;
+    border-bottom: 0;
+    color: $white;
   }
 }
 
-.appIntro {
-  font-size: large;
+.logosContainer {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto 20px;
+  max-width: 500px;
 }
 
-@keyframes appLogoSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.logo {
+  height: auto;
+  width: 30%;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 500px;
+  margin: 0;
+}
+
+.appIntro {
+  color: black;
+  font-size: 18px;
+  padding: 20px;
+
+  p {
+    margin: 0;
+  }
 }
