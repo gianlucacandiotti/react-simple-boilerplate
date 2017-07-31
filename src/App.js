@@ -1,12 +1,22 @@
 import React, { PureComponent } from 'react';
 import Helmet from 'react-helmet';
 import ExampleModal from 'components/ExampleModal';
+import ExampleFetch from 'components/ExampleFetch';
 import reactLogo from 'assets/images/react-logo.png';
 import sassLogo from 'assets/images/sass-logo.svg';
 import reactCssModulesLogo from 'assets/images/react-css-modules-logo.png';
 import './App.scssm';
 
 const title = 'react-simple-boilerplate';
+
+const ExampleComponent = ({ title, children }) => (
+  <div styleName="component">
+    <h3 styleName="component-title">{title}</h3>
+    <div>
+      {children}
+    </div>
+  </div>
+);
 
 class App extends PureComponent {
   render() {
@@ -39,10 +49,12 @@ class App extends PureComponent {
             Here are some example components!
           </h2>
           <div>
-            <div>
-              <h3 styleName="component-title">Example Modal</h3>
+            <ExampleComponent title="Example Modal">
               <ExampleModal />
-            </div>
+            </ExampleComponent>
+            <ExampleComponent title="Example for fetching from an API">
+              <ExampleFetch />
+            </ExampleComponent>
           </div>
         </section>
       </div>
