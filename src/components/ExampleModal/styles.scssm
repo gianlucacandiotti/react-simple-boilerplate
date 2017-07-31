@@ -1,0 +1,17 @@
+@import "~styles/commons/index";
+
+.button {
+  border: 0;
+  border-radius: 5px;
+  background-color: palevioletred;
+  color: $white;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px 20px;
+}
+
+.modalContent {
+  border-radius: 5px;
+  background-color: $white;
+  padding: 40px;
+}
