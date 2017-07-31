@@ -1,0 +1,82 @@
+@import "~styles/commons/index";
+
+.input {
+  border: 1px solid palevioletred;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto 10px;
+  max-width: 360px;
+  padding: 15px 10px;
+  width: 100%;
+}
+
+.button {
+  background-color: palevioletred;
+  border: 0;
+  border-radius: 5px;
+  color: $white;
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 360px;
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.loading-gif {
+  background-image: url("assets/images/loader.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+}
+
+.repos-list {
+  list-style: none;
+  margin: 20px auto 0;
+  max-width: 600px;
+  padding: 0;
+}
+
+.repo-list-item {
+  background-color: antiquewhite;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.repo {
+
+}
+
+.repo-info-group {
+  margin-bottom: 20px;
+}
+
+.repo-label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.repo-value {
+  color: $black;
+  margin: 0;
+}
