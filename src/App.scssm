@@ -1,0 +1,58 @@
+@import "~styles/commons/index";
+
+.app-header {
+  border-bottom: 1px solid $dark-grey;
+  color: $dark-grey;
+  padding: 20px;
+
+  @include breakpoint(md) {
+    background-color: $light-grey;
+    border-bottom: 0;
+    color: $white;
+  }
+}
+
+.logos-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto 20px;
+  max-width: 500px;
+}
+
+.logo {
+  height: auto;
+  width: 30%;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.app-intro {
+  color: black;
+  font-size: 18px;
+  padding: 20px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.components-section {
+  padding: 20px;
+}
+
+.components-section-title {
+  color: $black;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.component-title {
+  color: $black;
+  font-size: 20px;
+  font-weight: 400;
+}
