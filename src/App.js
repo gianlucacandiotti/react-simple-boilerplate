@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import Helmet from 'react-helmet';
+import ExampleModal from 'components/ExampleModal';
 import reactLogo from 'assets/images/react-logo.png';
 import sassLogo from 'assets/images/sass-logo.svg';
 import cssModulesLogo from 'assets/images/css-modules-logo.png';
@@ -33,6 +34,17 @@ class App extends PureComponent {
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
         </div>
+        <section className={styles.componentsSection}>
+          <h2 className={styles.componentsSectionTitle}>
+            Here are some example components!
+          </h2>
+          <div>
+            <div>
+              <h3 className={styles.componentTitle}>Example Modal</h3>
+              <ExampleModal />
+            </div>
+          </div>
+        </section>
       </div>
     );
   }
