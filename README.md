@@ -24,7 +24,7 @@ There are examples for using all of the stuff I'm talking about, you can remove 
 
 ## How can I start a project using this ?
 
-1. `git clone https://github.com/gianlucacandiotti/react-simple-boilerplate.git PPROJECT_NAME`.
+1. `git clone https://github.com/gianlucacandiotti/react-simple-boilerplate.git PROJECT_NAME`.
 2. `cd PROJECT_NAME && yarn` (or `npm install` if that suites you better).
 3. `cp .env-example .env` (This is in order to run an example, you can skip this if you don't need env variables in your client).
 
