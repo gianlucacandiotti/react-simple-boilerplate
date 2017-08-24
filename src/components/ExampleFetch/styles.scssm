@@ -1,5 +1,13 @@
 @import "~styles/commons/index";
 
+.error-wrapper {
+  margin-bottom: 10px;
+}
+
+.error {
+  color: crimson;
+}
+
 .input {
   border: 1px solid palevioletred;
   border-radius: 5px;

@@ -22,6 +22,7 @@ class ExampleFetch extends PureComponent {
     username: '',
     isLoading: false,
     repos: [],
+    error: '',
   };
 
   onChange = (e) => {
@@ -40,9 +41,13 @@ class ExampleFetch extends PureComponent {
     try {
       this.setState({
         repos: await githubService.getReposByUsername(this.state.username),
+        error: '',
       });
     } catch(error) {
-      console.log(error);
+      this.setState({
+        repos: [],
+        error: error.message,
+      });
     }
 
     this.setState({
@@ -55,10 +60,16 @@ class ExampleFetch extends PureComponent {
       username,
       isLoading,
       repos,
+      error,
     } = this.state;
 
     return (
       <div>
+        {error && (
+          <div styleName="error-wrapper">
+            <span styleName="error">{error}</span>
+          </div>
+        )}
         <form onSubmit={this.fetchRepos}>
           <div>
             <input
