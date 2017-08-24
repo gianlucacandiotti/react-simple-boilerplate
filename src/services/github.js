@@ -1,3 +1,5 @@
+import switchcase from 'utils/switchcase';
+
 class githubService {
   endpoint = process.env.REACT_APP_GITHUB_URL;
 
@@ -7,13 +9,17 @@ class githubService {
     const response = await fetch(url);
 
     if (!response.ok) {
-      throw new Error(`GithubService getReposByUsername failed, HTTP status ${response.status}`);
+      const error = switchcase({
+        '404': 'The username given does not exist'
+      })('An unexpected error ocurred')(response.status);
+
+      throw new Error(error);
     }
 
     const data = await response.json();
 
     if (data.Error) {
-      throw new Error(`GithubService getReposByUsername failed, There was an error in the response ${data.Error}`);
+      throw new Error(`There was an error in the response ${data.Error}`);
     }
 
     return data.map(repo => ({
