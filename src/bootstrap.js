@@ -1,2 +1,3 @@
 import 'normalize.css/normalize.css';
-import 'styles/index.scss';
+import 'animate.css/animate.css';
+import 'sass/index.scss';

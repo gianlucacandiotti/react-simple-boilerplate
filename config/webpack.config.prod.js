@@ -94,7 +94,7 @@ module.exports = {
       'react-native': 'react-native-web',
       'components': paths.appSrc + '/components',
       'services': paths.appSrc + '/services',
-      'styles': paths.appSrc + '/styles',
+      'sass': paths.appSrc + '/sass',
       'utils': paths.appSrc + '/utils',
       'assets': paths.appSrc + '/assets',
     },

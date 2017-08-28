@@ -2,18 +2,23 @@ import React, { PureComponent } from 'react';
 import githubService from 'services/github';
 import './styles.scssm';
 
-const RepoInfoGroup = ({ label, value }) => (
-  <div styleName="repo-info-group">
-    <span styleName="repo-label">{label}</span>
-    <p styleName="repo-value">{value}</p>
-  </div>
-);
-
 const Repo = ({ url, name, description }) => (
-  <div styleName="repo">
-    <RepoInfoGroup label="Name:" value={name} />
-    <RepoInfoGroup label="Description:" value={description} />
-    <RepoInfoGroup label="URL:" value={url} />
+  <div className="card">
+    <div className="card-content">
+      <p className="title is-6">
+        {name}
+      </p>
+      <p className="subtitle">
+        {description}
+      </p>
+    </div>
+    <footer className="card-footer">
+      <p className="card-footer-item">
+        <span>
+          View on <a href={url}>Github</a>
+        </span>
+      </p>
+    </footer>
   </div>
 );
 
@@ -65,34 +70,43 @@ class ExampleFetch extends PureComponent {
 
     return (
       <div>
-        {error && (
-          <div styleName="error-wrapper">
-            <span styleName="error">{error}</span>
-          </div>
-        )}
         <form onSubmit={this.fetchRepos}>
-          <div>
-            <input
-              type="text"
-              value={username}
-              placeholder="Enter a github username to fetch some repos!"
-              styleName="input"
-              onChange={this.onChange}
-            />
-            <button styleName="button">
-              Fetch
-              <div styleName={`overlay ${isLoading ? 'is-active' : ''}`}>
-                <span styleName="loading-gif" />
-              </div>
-            </button>
+          <div className="field">
+            <div className="control">
+              <input
+                className={`
+                  input
+                  ${error ? 'is-danger' : ''}
+                `}
+                type="text"
+                value={username}
+                placeholder="Enter a github username to fetch some repos!"
+                onChange={this.onChange}
+                style={{
+                  maxWidth: '400px',
+                }}
+              />
+            </div>
+            <p className="help is-danger">{error}</p>
+          </div>
+          <div className="field">
+            <div className="control">
+              <button
+                className={`
+                  button
+                  is-primary
+                  ${isLoading ? 'is-loading' : ''}
+                `}
+              >
+                Fetch
+              </button>
+            </div>
           </div>
         </form>
-        <ul styleName="repos-list">
+
+        <ul styleName="list">
           {repos.map(repo => (
-            <li
-              key={repo.id}
-              styleName="repo-list-item"
-            >
+            <li key={repo.id} styleName="list-item">
               <Repo {...repo} />
             </li>
           ))}
